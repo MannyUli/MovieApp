@@ -1,0 +1,116 @@
+/* Movie card container - fixed width to match poster */
+.home-section__card {
+    width: 200px;
+    max-width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Poster container - inherits from image-container but ensure it doesn't stretch */
+  .home-section__poster-container {
+    width: 200px;
+    max-width: 200px;
+    flex-shrink: 0;
+  }
+  
+  /* Poster image styling */
+  .home-section__poster {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Placeholder for missing posters */
+  .home-section__poster--placeholder {
+    width: 200px;
+    height: 300px;
+    background: rgba(12, 6, 25, 0.85);
+    color: rgba(228, 216, 255, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  /* Card body - contains title and metadata */
+  .home-section__card-body {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.75rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  /* Card title - wrap long titles and prevent stretching */
+  .home-section__card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #c4b5fd;
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 2.6em; /* Approximately 2 lines */
+  }
+  
+  /* Card rating */
+  .home-section__card-rating {
+    font-size: 0.85rem;
+    color: rgba(253, 234, 181, 0.8);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Card metadata (Year, Type) */
+  .home-section__card-meta {
+    font-size: 0.8rem;
+    color: rgba(228, 216, 255, 0.6);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Spacer card for layout (if used) */
+  .home-section__card--spacer {
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .home-section__card {
+      width: 150px;
+      max-width: 150px;
+    }
+  
+    .home-section__poster-container {
+      width: 150px;
+      max-width: 150px;
+    }
+  
+    .home-section__poster,
+    .home-section__poster--placeholder {
+      width: 150px;
+      height: 225px;
+    }
+  
+    .home-section__card-body {
+      max-width: 150px;
+      padding: 0.5rem 0.25rem;
+    }
+  
+    .home-section__card-title {
+      font-size: 0.85rem;
+    }
+  }

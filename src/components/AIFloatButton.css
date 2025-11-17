@@ -1,0 +1,52 @@
+.ai-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 0.35rem;
+  z-index: 1100;
+}
+
+.ai-float__circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8b5cf6, #5b21b6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f5f3ff;
+  box-shadow: 0 18px 35px rgba(91, 33, 182, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ai-float:hover .ai-float__circle {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 22px 40px rgba(91, 33, 182, 0.55);
+}
+
+.ai-float__label {
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  color: rgba(228, 216, 255, 0.9);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .ai-float {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .ai-float__circle {
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem;
+  }
+}

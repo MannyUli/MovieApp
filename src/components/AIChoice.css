@@ -1,0 +1,214 @@
+.ai-choice {
+  background: linear-gradient(135deg, rgba(26, 10, 46, 0.8), rgba(16, 16, 54, 0.85));
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto 2rem;
+  box-shadow: 0 20px 45px rgba(8, 1, 16, 0.35);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+.ai-choice__header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.ai-choice__header h2 {
+  color: #e9d5ff;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.ai-choice__header p {
+  color: rgba(228, 216, 255, 0.8);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.ai-choice__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.ai-choice__label {
+  color: #c4b5fd;
+  font-weight: 600;
+}
+
+.ai-choice__input-group {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.ai-choice__input {
+  flex: 1 1 260px;
+  min-width: 220px;
+  background: rgba(12, 6, 25, 0.85);
+  border: 1px solid rgba(139, 92, 246, 0.45);
+  color: #f8f5ff;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-choice__input:focus {
+  outline: none;
+  border-color: rgba(196, 181, 253, 0.7);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.25);
+}
+
+.ai-choice__button {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: #f8f5ff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.ai-choice__button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(139, 92, 246, 0.35);
+}
+
+.ai-choice__button:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.ai-choice__error,
+.ai-choice__empty {
+  color: #fdd1d1;
+  background: rgba(220, 38, 38, 0.2);
+  border: 1px solid rgba(248, 113, 113, 0.4);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.ai-choice__empty {
+  color: #e0e7ff;
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.25);
+}
+
+.ai-choice__results {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.ai-choice__column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  min-width: 220px;
+}
+
+.ai-choice__card {
+  width: 220px;
+  max-width: 100%;
+  background: rgba(8, 1, 16, 0.55);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  box-shadow: 0 12px 25px rgba(8, 1, 16, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-align: left;
+}
+
+.ai-choice__card:hover,
+.ai-choice__card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(8, 1, 16, 0.5);
+  outline: none;
+}
+
+.ai-choice__card--spacer {
+  visibility: hidden;
+  pointer-events: none;
+  margin: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.ai-choice__poster-wrapper {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  background: rgba(12, 6, 25, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-choice__poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ai-choice__poster--placeholder {
+  color: rgba(196, 181, 253, 0.75);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 0.5rem;
+  height: 100%;
+  width: 100%;
+}
+
+.ai-choice__card-body {
+  padding: 1rem;
+}
+
+.ai-choice__title {
+  color: #f5f3ff;
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+}
+
+.ai-choice__rating {
+  margin: 0 0 0.35rem;
+  color: #facc15;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.ai-choice__meta {
+  margin: 0;
+  color: rgba(228, 216, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .ai-choice {
+    padding: 1.5rem;
+  }
+
+  .ai-choice__header h2 {
+    font-size: 1.75rem;
+  }
+
+  .ai-choice__column {
+    min-width: 180px;
+  }
+
+  .ai-choice__card {
+    width: 100%;
+  }
+}
